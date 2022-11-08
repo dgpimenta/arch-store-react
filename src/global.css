@@ -1,0 +1,173 @@
+/********** RESET **********/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+}
+
+/********** VARIABLES **********/
+:root {
+  --base-title: hsla(14, 8%, 14%, 1);
+  --base-subtitle: hsla(12, 7%, 23%, 1);
+  --base-text: hsla(13, 6%, 32%, 1);
+  --base-label: hsla(0, 3%, 54%, 1);
+  --product-background: hsl(0, 4%, 95%);
+  --base-button: hsla(0, 2%, 90%, 1);
+
+  --orange: hsl(36, 79%, 43%);
+  --brand-yellow-light: hsl(48, 59%, 87%);
+
+  --brand-purple: hsl(259, 92%, 63%);
+  --brand-purple-dark: hsla(259, 57%, 37%, 1);
+
+  --base-background: hsl(0, 0%, 98%);
+}
+
+/********** BASE **********/
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--base-background);
+}
+
+#root {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+/********** RESPONSIVE MEDIAS **********/
+@media (max-width: 1280px) {
+  section#about #details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 730px) {
+  /********** ABOUT-SECTION **********/
+  section#about {
+    background-image: url(./assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  section#store {
+    text-align: center;
+  }
+
+  section#store .products {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  /********** BASE **********/
+  .container {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.8rem;
+  }
+
+  .logo strong {
+    font-size: 1.5rem;
+  }
+
+  /********** HEADER **********/
+  header .user-details {
+    gap: 0.4rem;
+  }
+
+  /********** ABOUT-SECTION **********/
+  section#about #message h1 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+  }
+
+  section#about #message p {
+    font-size: 1.1rem;
+  }
+
+  /********** FOOTER **********/
+  footer.page-footer {
+    height: 5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /********** BASE **********/
+  .container {
+    padding: 0.9rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.2rem;
+  }
+
+  .logo strong {
+    font-size: 1rem;
+  }
+
+  /********** HEADER **********/
+  header {
+    padding-block: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  header .user-details {
+    gap: 0.2rem;
+  }
+
+  header .user-details p {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  /********** ABOUT-SECTION **********/
+  section#about #message h1 {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  section#about #message p {
+    font-size: 1rem;
+  }
+
+  section#about #message ul {
+    margin-top: 2rem;
+  }
+
+  section#about #message ul li p {
+    font-size: 0.8rem;
+  }
+
+  /********** FOOTER **********/
+  footer.page-footer {
+    height: 5rem;
+  }
+}

@@ -1,0 +1,206 @@
+/********** BASE **********/
+.container {
+  width: 80%;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+/********** LOGO **********/
+.logo a {
+  color: black;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 5rem;
+}
+
+.logo strong {
+  font-size: 2.3rem;
+}
+
+/********** SWITCH **********/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--brand-yellow-light);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--orange);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--product-background);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--product-background);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/********** HEADER **********/
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .userDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+header .userDetails img {
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+header .userDetails img:hover {
+  transform: scale(1.1);
+}
+
+header .userDetails p {
+  color: var(--base-title);
+  font-weight: bold;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+header .userDetails p:hover {
+  color: var(--orange);
+  filter: brightness(1.2);
+}
+
+#dark .logo strong {
+  color: white;
+}
+
+#dark {
+  background: black;
+}
+
+#dark .userDetails p {
+  color: var(--base-background);
+}
+
+#dark .userDetails p:hover {
+  color: var(--orange);
+}
+
+/********** RESPONSIVE MEDIAS **********/
+@media (min-width: 2560px) {
+  /********** LOGO *********/
+  .logo img {
+    height: 7rem;
+  }
+
+  .logo strong {
+    font-size: 3.2rem;
+  }
+
+  /********** HEADER **********/
+  header {
+    padding-block: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /********** BASE **********/
+  .container {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.8rem;
+  }
+
+  .logo strong {
+    font-size: 1.5rem;
+  }
+
+  /********** HEADER **********/
+  header .userDetails {
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /********** BASE **********/
+  .container {
+    padding: 0.9rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.2rem;
+  }
+
+  .logo strong {
+    font-size: 1rem;
+  }
+
+  /********** HEADER **********/
+  header {
+    padding-block: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  header .userDetails {
+    gap: 0.2rem;
+  }
+
+  header .userDetails p {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+}

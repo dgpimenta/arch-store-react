@@ -1,0 +1,75 @@
+/********** LOGO **********/
+.logo a {
+  color: black;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 5rem;
+}
+
+.logo strong {
+  font-size: 2.3rem;
+}
+
+/********** FOOTER **********/
+footer.pageFooter {
+  height: 7rem;
+  background: black;
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .logo strong {
+  color: white;
+}
+
+/********** RESPONSIVE MEDIAS **********/
+@media (max-width: 600px) {
+  /********** BASE **********/
+  .container {
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.8rem;
+  }
+
+  .logo strong {
+    font-size: 1.5rem;
+  }
+
+  /********** FOOTER **********/
+  footer.pageFooter {
+    height: 5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /********** BASE **********/
+  .container {
+    padding: 0.9rem;
+  }
+
+  /********** LOGO **********/
+  .logo img {
+    height: 2.2rem;
+  }
+
+  .logo strong {
+    font-size: 1rem;
+  }
+
+  /********** FOOTER **********/
+  footer.pageFooter {
+    height: 5rem;
+  }
+}

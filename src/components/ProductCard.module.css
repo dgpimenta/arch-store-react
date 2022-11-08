@@ -1,0 +1,144 @@
+/********** BASE **********/
+.container {
+  width: 80%;
+  margin-inline: auto;
+  padding: 1.5rem;
+}
+
+/********** STORE-SECTION **********/
+.product {
+  background: var(--product-background);
+  padding-inline: 0.6rem;
+  border-radius: 0.5rem 2rem;
+
+  width: 256px;
+  height: 310px;
+
+  text-align: center;
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product img.productImage,
+.product h3,
+.product p.description,
+.product footer .icons img {
+  cursor: pointer;
+}
+
+.product img.productImage {
+  margin-block: -2rem 1.5rem;
+  width: 120px;
+
+  align-self: center;
+
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.product img.productImage:hover {
+  transform: scale(1.1);
+}
+
+.product h3 {
+  font-family: 'Baloo 2', cursive;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--base-subtitle);
+}
+
+.product p {
+  color: var(--base-label);
+  font-size: 1rem;
+  line-height: 1rem;
+
+  flex: 1;
+}
+
+.product footer {
+  margin-top: auto;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product footer p {
+  color: var(--base-subtitle);
+  font-size: 0.8rem;
+}
+
+.product footer strong {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.product footer .icons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quantitySelector {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  background: var(--base-button);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.quantitySelector span {
+  color: var(--base-title);
+  line-height: 130%;
+}
+
+.quantitySelector button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.quantitySelector button svg {
+  color: var(--brand-purple);
+}
+
+.quantitySelector button svg:hover {
+  color: var(--brand-purple-dark);
+}
+
+.addToCartButton {
+  display: flex;
+  color: white;
+  background: var(--brand-purple-dark);
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.addToCartButton:hover {
+  background: var(--brand-purple);
+}
+
+/********** RESPONSIVE MEDIAS **********/
+@media (max-width: 600px) {
+  /********** BASE **********/
+  .container {
+    width: 90%;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /********** BASE **********/
+  .container {
+    padding: 0.9rem;
+  }
+}
